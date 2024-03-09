@@ -10,6 +10,9 @@ box-sizing:border-box;
 }
 :root{
 --PRINCIPAL-COLOR:#1f2937;
+--SECONDARY-COLOR:white;
+--TERTIARY-COLOR:whitesmoke;
+--CONTRAST-COLOR:BLACK;
 --LOW-CONTRAST-TEXT:GREY;
 
 }
@@ -48,7 +51,7 @@ text-decoration:none;
     height:auto;
     background-color: purple;
     display:grid;
-    grid-template:auto 50vh 50vh/ 100%;
+    grid-template:auto auto auto/ 100%;
 }
 .mainPrincipal{
     padding:100px;
@@ -90,9 +93,66 @@ text-decoration:none;
     background:url(images/pexels-finn-semmer-19166222.jpg);
     background-size:cover;
     height:60%;
-    flex:0 0 auto;
-    width:400px;
+    flex:0 1 auto;
+    width:300px;
     height:200px;
+}
+.mainSecondary{
+    grid-area:2/1/3/2;
+    padding:50px;
+    background:var(--SECONDARY-COLOR);
+}
+.mainSecondarySubtitle{
+    color:var(--CONTRAST-COLOR);
+    text-align:center;
+    padding:30px;
+    font-size:36px;
+    font-weight:bolder;
+    
+}
+.mainSecondaryCards{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+}
+.mainSecondaryCardsCard{
+    display:flex;
+    flex-flow:column nowrap;
+    flex:0 0 auto;
+    width:140px;
+    gap:10px;
+}
+.mainSecondaryCardsCardBlock{
+    height:140px;
+    width:140px;
+    border:solid 3px blue;
+    border-radius:10px;
+}
+.mainSecondaryCardsCardText{
+    color:var(--LOW-CONTRAST-TEXT);
+    text-align:center;
+}
+.mainTertiary{
+    grid-area:3/1/4/2;
+    height:400px;
+    background-color:var(--TERTIARY-COLOR);
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    justify-content:center;
+}
+.mainTertiaryParagraph{
+    font-size:36px;
+    color:rgb(63, 63, 63);
+    width:53%;
+    font-weight:100;
+}
+.mainTertiaryQuote{
+    text-align:right;
+    font-size:18px;
+    width:53%;
 }
 @media all and (max-width:524px){
     /* Header */
@@ -103,3 +163,12 @@ text-decoration:none;
         margin-right:0px;
     }
 }
+@media all and (max-width:650px){
+    /* Header */
+   /* Main */
+  .mainTertiaryParagraph{
+   font-size:30px;
+   width:90%;
+  }
+}
+
