@@ -1,8 +1,57 @@
+/* BoilerPlate */
 *{
 padding:0;
 margin:0;
 box-sizing:border-box;
+font-family:;
 }
+/* Utilities */
+.nowrap{
+    white-space:nowrap;
+}
+/* Start Main CSS */
 body{
     min-height:100vh;
+}
+/* Header */
+header{
+    display:flex;
+    align-items:center;
+    flex-flow:row wrap;
+    padding:10px 100px;
+    background-color:#1f2937;
+    justify-content:center;
+}
+.headerTitle{
+    font-size:24px;
+    color:#F9FAF8;
+    margin-right:auto;
+    
+}
+.headerNav{
+    display:flex;
+    flex-flow:nowrap row;
+    gap:10px;
+    margin-left:auto;
+}
+.headerNavButtons{
+font-size:18px;
+color:#E5E7EB;
+text-decoration:none;
+}
+/* Main Content */
+.main{
+    height:134vh;
+    background-color: purple;
+    display:grid;
+    grid-template:40vh 47vh 47vh/ 100%;
+}
+@media all and (max-width:524px){
+    /* Header */
+    .headerNav{
+        margin-left:0px;
+    }
+    .headerTitle{
+        margin-right:0px;
+    }
 }
