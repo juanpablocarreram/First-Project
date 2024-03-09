@@ -3,11 +3,15 @@
 padding:0;
 margin:0;
 box-sizing:border-box;
-font-family:;
 }
 /* Utilities */
 .nowrap{
     white-space:nowrap;
+}
+:root{
+--PRINCIPAL-COLOR:#1f2937;
+--LOW-CONTRAST-TEXT:GREY;
+
 }
 /* Start Main CSS */
 body{
@@ -19,7 +23,7 @@ header{
     align-items:center;
     flex-flow:row wrap;
     padding:10px 100px;
-    background-color:#1f2937;
+    background-color:var(--PRINCIPAL-COLOR);
     justify-content:center;
 }
 .headerTitle{
@@ -36,15 +40,59 @@ header{
 }
 .headerNavButtons{
 font-size:18px;
-color:#E5E7EB;
+color:var(--LOW-CONTRAST-TEXT);
 text-decoration:none;
 }
 /* Main Content */
 .main{
-    height:134vh;
+    height:auto;
     background-color: purple;
     display:grid;
-    grid-template:40vh 47vh 47vh/ 100%;
+    grid-template:auto 50vh 50vh/ 100%;
+}
+.mainPrincipal{
+    padding:100px;
+    display:flex;
+    flex-flow:wrap row;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    background-color:var(--PRINCIPAL-COLOR);
+}
+.mainPrincipalText{
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    align-content:flex-start;
+}
+.mainPrincipalTextHero{
+    font-size:48px;
+    color:white;
+    width:360px;
+}
+.mainPrincipalTextParagraph{
+    width:360px;
+    color:var(--LOW-CONTRAST-TEXT);
+}
+.mainPrincipalTextButton{
+    display:flex;
+    margin-right:auto;
+    color:white;
+    text-decoration:none;
+    background-color:#3382f6;
+    border-radius:5px;
+    padding:10px 30px;
+}
+
+.mainPrincipalImageFile{
+    background:url(images/pexels-finn-semmer-19166222.jpg);
+    background-size:cover;
+    height:60%;
+    flex:0 0 auto;
+    width:400px;
+    height:200px;
 }
 @media all and (max-width:524px){
     /* Header */
